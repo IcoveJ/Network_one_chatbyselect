@@ -1,0 +1,43 @@
+{
+  // See https://go.microsoft.com/fwlink/?LinkId=733558 
+  // for the documentation about the tasks.json format
+  "version": "2.0.0",
+  "tasks": [
+      {
+      "label": "g++",
+      "type": "shell",
+      "command": "g++",
+      "args": [
+        "-std=c++11",
+        "-g",
+        "${file}", 
+        "-o", 
+        "C:\\Users\\86152\\Desktop\\QQ_C++\\exe\\${fileBasenameNoExtension}.exe",
+        "-I",
+        "C:\\Users\\86152\\Desktop\\QQ_C++\\head",
+        // "-L",
+        // "C:\\Users\\86152\\Desktop\\QQ_C++\\source\\start_client.cc",
+        // "C:\\Users\\86152\\Desktop\\QQ_C++\\source\\start_server.cc",
+        "-I",
+        "D:\\MySql\\mysql-8.0.11-winx64\\mysql-8.0.11-winx64\\include",
+        "-L",
+        "D:\\MySql\\mysql-8.0.11-winx64\\mysql-8.0.11-winx64\\lib",
+        "-lmysql",
+        "-lwsock32" ,
+        "-lmingw32"
+      ],
+      "group": {
+          "kind": "build",
+          "isDefault": true
+        },
+        "presentation": {
+          "echo": true,
+          "reveal": "always",
+          "focus": false,
+          "panel": "new",
+          "showReuseMessage": true,
+          "clear": false
+        }
+      }
+  ]
+}
